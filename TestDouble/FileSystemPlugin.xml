@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<module name="FileSystemPlugin">
+  <bind name="Default"
+            service="AbstractionLayer.IFileWriter, AbstractionLayer"
+            to="MessageReceiver.FileWriter, MessageReceiver" />
+</module>
