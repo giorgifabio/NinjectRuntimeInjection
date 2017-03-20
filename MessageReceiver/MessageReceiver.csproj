@@ -64,10 +64,6 @@
       <Project>{6aa56a02-d71d-40c7-b322-87fd99399752}</Project>
       <Name>AbstractionLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestDouble\TestDouble.csproj">
-      <Project>{43e77f79-891e-4cdd-b593-b5015ce57bce}</Project>
-      <Name>TestDouble</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="FileSystemPlugin.xml">
