@@ -41,22 +41,6 @@ namespace MessageReceiver_BDD_Test.TestDouble
             Console.WriteLine(message + message + message + message + message);
             Console.WriteLine(message + message + message);
             Console.WriteLine(message + message);
-            Console.WriteLine(message);
-            Console.WriteLine(message);
-            Console.WriteLine(message);
-            Console.WriteLine(message);
-            Console.WriteLine(message);
-            Console.WriteLine(message + message);
-            Console.WriteLine(message + message + message);
-            Console.WriteLine(message + message + message + message);
-            Console.WriteLine(message + message + message + message + message);
-            Console.WriteLine(message + message + message + message + message + message);
-            Console.WriteLine(message + message + message + message + message + message + message);
-            Console.WriteLine(message + message + message + message + message + message);
-            Console.WriteLine(message + message + message + message + message);
-            Console.WriteLine(message + message + message);
-            Console.WriteLine(message + message);
-
         }
 
         private Assembly Config
@@ -76,10 +60,10 @@ namespace MessageReceiver_BDD_Test.TestDouble
             new SetConfiguration().WriteFile(Config);
         }
 
-        //[BeforeScenario("FunnyStub")]
-        //public void BeforeScenario()
-        //{
-        //    Inject();
-        //}
+        [BeforeScenario("FunnyStub")]
+        public void BeforeScenario()
+        {
+            Inject();
+        }
     }
 }

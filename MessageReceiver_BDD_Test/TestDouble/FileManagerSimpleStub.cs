@@ -34,10 +34,10 @@ namespace MessageReceiver_BDD_Test.TestDouble
             new SetConfiguration().WriteFile(Config);
         }
 
-        //[BeforeScenario("SimpleStub")]
-        //public void BeforeScenario()
-        //{
-        //    Inject();
-        //}
+        [BeforeScenario("SimpleStub")]
+        public void BeforeScenario()
+        {
+            Inject();
+        }
     }
 }

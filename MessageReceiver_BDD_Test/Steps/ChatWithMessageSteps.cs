@@ -9,23 +9,23 @@ namespace MessageReceiver_BDD_Test.Steps
     [Binding]
     public class ChatWithMessageSteps
     {
-        [BeforeScenario]
-        public void BeforeScenario()
-        {
-            new SetConfiguration().SetDefault();
-        }
+        //[BeforeScenario]
+        //public void BeforeScenario()
+        //{
+        //    new SetConfiguration().SetDefault();
+        //}
 
-        [BeforeScenario("SimpleStub")]
-        public void InjectFunnyStub()
-        {
-            new FileManagerSimpleStub().Inject();
-        }
+        //[BeforeScenario("SimpleStub")]
+        //public void InjectFunnyStub()
+        //{
+        //    new FileManagerSimpleStub().Inject();
+        //}
 
-        [BeforeScenario("FunnyStub")]
-        public void InjectSimpleStub()
-        {
-            new FileManagerFunnyStub().Inject();
-        }
+        //[BeforeScenario("FunnyStub")]
+        //public void InjectSimpleStub()
+        //{
+        //    new FileManagerFunnyStub().Inject();
+        //}
         
         [When(@"I send a message to my receiver application")]
         public void WhenISendAMessageToMyReceiverApplication()
