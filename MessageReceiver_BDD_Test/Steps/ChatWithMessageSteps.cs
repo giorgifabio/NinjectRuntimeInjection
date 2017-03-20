@@ -1,7 +1,8 @@
 ﻿using System;
 using System.IO;
 using TechTalk.SpecFlow;
-using TestDouble;
+using MessageReceiver_BDD_Test.TestDouble;
+using MessageReceiver_BDD_Test.Utility;
 
 namespace MessageReceiver_BDD_Test.Steps
 {

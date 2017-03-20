@@ -1,8 +1,9 @@
 ﻿using AbstractionLayer;
+using MessageReceiver_BDD_Test.Utility;
 using System;
 using TechTalk.SpecFlow;
 
-namespace TestDouble
+namespace MessageReceiver_BDD_Test.TestDouble
 {
     [Binding]
     public class FileManagerFunnyStub : IFileWriter
@@ -65,7 +66,7 @@ namespace TestDouble
                 Assembly myAssembly = new Assembly();
                 myAssembly.BindName = "Observe";
                 myAssembly.Service = "AbstractionLayer.IFileWriter, AbstractionLayer";
-                myAssembly.To = "TestDouble.FileManagerFunnyStub, TestDouble";
+                myAssembly.To = "MessageReceiver_BDD_Test.TestDouble.FileManagerFunnyStub, MessageReceiver_BDD_Test";
                 return myAssembly;
             }
         }

@@ -1,19 +1,6 @@
-﻿//<module name = "FileSystemPlugin" >
-//  < bind name="AutoAssert"
-//              service="AbstractionLayer.IFileManager, AbstractionLayer"
-//              to="TestDouble.FileManagerAutoAssertStub, TestDouble" />
-//  <bind name = "Observe"
-//              service="AbstractionLayer.IFileManager, AbstractionLayer"
-//              to="TestDouble.FileManagerObservableStub, TestDouble" />
-//  <bind name = "Default"
-//            service="AbstractionLayer.IFileManager, AbstractionLayer"
-//            to="NinjectRuntimeInjection.ExternalSystems.FileManager, NinjectRuntimeInjection" />
-//</module>
+﻿using System.Xml;
 
-
-using System.Xml;
-
-namespace TestDouble
+namespace MessageReceiver_BDD_Test.Utility
 {
     public class SetConfiguration
     {
