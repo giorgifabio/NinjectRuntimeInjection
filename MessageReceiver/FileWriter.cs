@@ -13,9 +13,9 @@ namespace MessageReceiver
                 writetext.WriteLine(message);
             }
             Console.WriteLine("");
-            Console.WriteLine("Your message" + @" << " + "{0}" + @">>" +  "have been Persisted", message);
+            Console.WriteLine("Your message" + @" << " + "{0}" + @">>" + "have been Persisted", message);
             Console.WriteLine("");
             Console.WriteLine("");
         }
-}
+    }
 }
