@@ -1,6 +1,7 @@
 ﻿using AbstractionLayer;
 using MessageReceiver_BDD_Test.Utility;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace MessageReceiver_BDD_Test.TestDouble
@@ -8,6 +9,7 @@ namespace MessageReceiver_BDD_Test.TestDouble
     [Binding]
     public class FileManagerFunnyStub : IFileWriter
     {
+
         public void Persist(string message)
         {
             Console.WriteLine("");
@@ -27,20 +29,6 @@ namespace MessageReceiver_BDD_Test.TestDouble
             Console.WriteLine(message + message + message);
             Console.WriteLine(message + message);
             Console.WriteLine(message);
-            Console.WriteLine(message);
-            Console.WriteLine(message);
-            Console.WriteLine(message);
-            Console.WriteLine(message);
-            Console.WriteLine(message + message);
-            Console.WriteLine(message + message + message);
-            Console.WriteLine(message + message + message + message);
-            Console.WriteLine(message + message + message + message + message);
-            Console.WriteLine(message + message + message + message + message + message);
-            Console.WriteLine(message + message + message + message + message + message + message);
-            Console.WriteLine(message + message + message + message + message + message);
-            Console.WriteLine(message + message + message + message + message);
-            Console.WriteLine(message + message + message);
-            Console.WriteLine(message + message);
         }
 
         private Assembly Config
@@ -64,6 +52,13 @@ namespace MessageReceiver_BDD_Test.TestDouble
         public void BeforeScenario()
         {
             Inject();
+        }
+
+        [AfterScenario("FunnyStub")]
+        public void AfterScenario()
+        {
+            Thread.Sleep(2000); // wait for the result that I cannot assert!!
+            new SetConfiguration().SetDefault();
         }
     }
 }

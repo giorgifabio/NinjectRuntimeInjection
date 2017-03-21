@@ -1,6 +1,7 @@
 ﻿using AbstractionLayer;
 using MessageReceiver_BDD_Test.Utility;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace MessageReceiver_BDD_Test.TestDouble
@@ -38,6 +39,13 @@ namespace MessageReceiver_BDD_Test.TestDouble
         public void BeforeScenario()
         {
             Inject();
+        }
+
+        [AfterScenario("SimpleStub")]
+        public void AfterScenario()
+        {
+            Thread.Sleep(2000); // wait for the result that I cannot assert!!
+            new SetConfiguration().SetDefault();
         }
     }
 }
