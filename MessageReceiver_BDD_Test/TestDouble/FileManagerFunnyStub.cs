@@ -57,7 +57,7 @@ namespace MessageReceiver_BDD_Test.TestDouble
         [AfterScenario("FunnyStub")]
         public void AfterScenario()
         {
-            Thread.Sleep(200); // wait for the result that I cannot assert!!
+            Thread.Sleep(200); // // Please assert something and remove me!
             new SetConfiguration().SetDefault();
         }
     }
