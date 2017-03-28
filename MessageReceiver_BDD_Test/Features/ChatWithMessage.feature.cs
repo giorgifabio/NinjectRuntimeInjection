@@ -73,16 +73,16 @@ namespace MessageReceiver_BDD_Test.Features
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Use a simple stub of the file system")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ChatWithMessage")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("SimpleStub")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("MyNewFileSystemStub")]
         public virtual void UseASimpleStubOfTheFileSystem()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Use a simple stub of the file system", new string[] {
-                        "SimpleStub"});
-#line 8
-this.ScenarioSetup(scenarioInfo);
+                        "MyNewFileSystemStub"});
 #line 9
- testRunner.When("I send a message to my receiver application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
 #line 10
+ testRunner.When("I send a message to my receiver application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
  testRunner.Then("a different message is visualized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -92,15 +92,19 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Use a stub that do something funny")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ChatWithMessage")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("FunnyStub")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ReceiverStubInjectInBlob")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ReceiverStubUpload")]
         public virtual void UseAStubThatDoSomethingFunny()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Use a stub that do something funny", new string[] {
-                        "FunnyStub"});
-#line 13
+                        "FunnyStub",
+                        "ReceiverStubInjectInBlob",
+                        "ReceiverStubUpload"});
+#line 16
 this.ScenarioSetup(scenarioInfo);
-#line 14
+#line 17
  testRunner.When("I send a message to my receiver application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
+#line 18
  testRunner.Then("a funny message is visualized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

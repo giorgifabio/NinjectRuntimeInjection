@@ -23,8 +23,11 @@ namespace MessageReceiver_BDD_Test.Utility
 
         public void WriteFile(Assembly fileWriter)
         {
+            //ho to overwrite the file on Azure
+            //Test WebServices?
+            //execute all the tests in azure infra VM (locally)
             XmlDocument doc = new XmlDocument();
-            doc.Load("FileSystemPlugin.xml");
+            doc.Load("FileSystemPlugin.xml"); 
             XmlNode countNode = doc.SelectSingleNode("/module/bind");
 
             countNode.Attributes["name"].Value = fileWriter.BindName;
